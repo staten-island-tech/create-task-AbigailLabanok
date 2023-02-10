@@ -11,15 +11,16 @@ body,
 :root {
   --black: #000;
   --white: #ffffff;
-  --color1: #fff7eb;
-  --color2: #bd4f40;
-  --color3: #d18375;
-  --color4: #c12612c7;
+  --color1: #ebe3df;
+  --color2: #222f33;
+  --color3: #910003;
+  --color4: #e38681;
 
   /*Intentions*/
   --primary: var(--color1);
   --secondary: var(--color2);
   --tertiary: var(--color3);
+  --quaternary: var(--color4);
 
   /*Typography*/
   --h1: 7.594rem;
@@ -31,6 +32,7 @@ body,
 
 h1 {
   font-size: var(--h1);
+  color: var(--tertiary);
 }
 h2 {
   font-size: var(--h2);
