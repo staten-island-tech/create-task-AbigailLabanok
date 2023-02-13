@@ -15,6 +15,7 @@ body,
   --color2: #222f33;
   --color3: #910003;
   --color4: #e38681;
+  --color2dark: #D3CCC8;
 
   /*Intentions*/
   --primary: var(--color1);
@@ -58,4 +59,33 @@ h5 {
 }
 body {
   background-color: var(--primary);
+}
+.display {
+  margin: 5rem auto;
+  height: 60rem;
+  width: 70rem;
+  border: solid 1rem var(--secondary);
+  border-radius: 5rem;
+  background-color: var(--color2dark);
+}
+button,
+button:link,
+button:visited {
+  font-size: var(--h3);
+  margin: 2rem 2rem;
+  width: 35rem;
+  height: 7rem;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  border: solid 0.4rem var(--tertiary);
+  border-radius: 2rem;
+  background-color: var(--white);
+  display: inline-block;
+  transition: all 0.2s;
+  color: var(--secondary);
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 1rem rgba(0, 0, 0, 0.2);
 }
