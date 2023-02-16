@@ -67,6 +67,7 @@ body {
   border: solid 1rem var(--secondary);
   border-radius: 5rem;
   background-color: var(--color2dark);
+  display: flex;
 }
 button,
 button:link,
