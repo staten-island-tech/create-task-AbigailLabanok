@@ -15,7 +15,7 @@ body,
   --color2: #222f33;
   --color3: #910003;
   --color4: #e38681;
-  --color2dark: #D3CCC8;
+  --color2dark: #d3ccc8;
 
   /*Intentions*/
   --primary: var(--color1);
@@ -68,6 +68,35 @@ body {
   border-radius: 5rem;
   background-color: var(--color2dark);
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.agent-picture {
+  width: 55rem;
+  margin: 1rem auto;
+  border: solid 0.5rem var(--secondary);
+  border-radius: 3rem;
+  background: linear-gradient(
+    -45deg,
+    #89f476ff,
+    #347334ff,
+    #2c4f5eff,
+    #493a7cff
+  );
+  background-size: 200% 200%;
+  animation: gradient 10s ease infinite;
+  height: 100%;
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 button,
 button:link,
