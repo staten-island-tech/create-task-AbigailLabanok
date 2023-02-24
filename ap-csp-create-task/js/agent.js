@@ -39,7 +39,7 @@ async function getAgent() {
       .forEach((el) => {
         DOMSelectors.display.insertAdjacentHTML(
           "beforeend",
-          `<img class="agent-picture" src="${el.fullPortrait}" alt="${el.displayName} card"/>`
+          `<img class="agent-picture" class="${el.developerName}" id="${el.displayName}" src="${el.fullPortrait}" alt="${el.displayName} card"/>`
         );
       });
   } catch (err) {
