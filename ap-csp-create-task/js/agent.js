@@ -29,51 +29,33 @@ async function getAgent() {
   ];
   var agent = names[Math.floor(Math.random() * names.length)];
 
-  if (agentArr.includes(`${agent}`) || agentArr.includes(`${newAgent}`)) {
-    console.log("already seen it");
-    var newAgent = names[Math.floor(Math.random() * names.length)];
-    DOMSelectors.display.insertAdjacentHTML(
-      "beforeend",
-      `<h2>${newAgent}</h2>`
-    );
-
-    try {
-      const response = await fetch(agentapi);
-      const data = await response.json();
-      console.log(data);
-      data.data
-        .filter((element) => element.displayName.includes(newAgent))
-        .forEach((el) => {
-          DOMSelectors.display.insertAdjacentHTML(
-            "beforeend",
-            `<img class="agent-picture ${el.developerName}  " id="${el.displayName}" src="${el.fullPortrait}" alt="${el.displayName} card"/>`
-          );
-        });
-    } catch (err) {
-      console.error(err);
-    }
-
-    agentArr.push(`${newAgent}`);
+  if (agentArr.length > 100) {
+    DOMSelectors.display.innerHTML = "";
   } else {
-    console.log("new");
+    if (agentArr.includes(`${agent}`)) {
+      console.log("already seen it");
+      getAgent();
+    } else {
+      console.log("new");
 
-    console.log(agent);
-    DOMSelectors.display.insertAdjacentHTML("beforeend", `<h2>${agent}</h2>`);
+      console.log(agent);
+      DOMSelectors.display.insertAdjacentHTML("beforeend", `<h2>${agent}</h2>`);
 
-    try {
-      const response = await fetch(agentapi);
-      const data = await response.json();
-      console.log(data);
-      data.data
-        .filter((element) => element.displayName.includes(agent))
-        .forEach((el) => {
-          DOMSelectors.display.insertAdjacentHTML(
-            "beforeend",
-            `<img class="agent-picture ${el.developerName}  " id="${el.displayName}" src="${el.fullPortrait}" alt="${el.displayName} card"/>`
-          );
-        });
-    } catch (err) {
-      console.error(err);
+      try {
+        const response = await fetch(agentapi);
+        const data = await response.json();
+        console.log(data);
+        data.data
+          .filter((element) => element.displayName.includes(agent))
+          .forEach((el) => {
+            DOMSelectors.display.insertAdjacentHTML(
+              "beforeend",
+              `<img class="agent-picture ${el.developerName}  " id="${el.displayName}" src="${el.fullPortrait}" alt="${el.displayName} card"/>`
+            );
+          });
+      } catch (err) {
+        console.error(err);
+      }
     }
   }
 
