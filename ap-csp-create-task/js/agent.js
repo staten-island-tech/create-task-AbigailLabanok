@@ -31,6 +31,9 @@ async function getAgent() {
 
   if (agentArr.length > 100) {
     DOMSelectors.display.innerHTML = "";
+    alert(
+      "Error! You have randomly selected each of the agents currently in the game. Please click reset in order to select another agent."
+    );
   } else {
     if (agentArr.includes(`${agent}`)) {
       console.log("already seen it");
