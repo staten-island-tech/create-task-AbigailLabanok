@@ -40,7 +40,6 @@ async function getAgent() {
       getAgent();
     } else {
       console.log("new");
-
       console.log(agent);
       DOMSelectors.display.insertAdjacentHTML("beforeend", `<h2>${agent}</h2>`);
 
