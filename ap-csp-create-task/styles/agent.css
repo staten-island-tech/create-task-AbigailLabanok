@@ -78,7 +78,7 @@
   );
   background-size: 200% 200%;
 }
-#Sova {
+.Hunter {
   background: linear-gradient(
     -45deg,
     #f7c7a5ff,
@@ -87,6 +87,10 @@
     #082652ff
   );
   background-size: 200% 200%;
+}
+.Hunter_NPE {
+  position: absolute;
+  visibility: hidden;
 }
 #Killjoy {
   background: linear-gradient(
