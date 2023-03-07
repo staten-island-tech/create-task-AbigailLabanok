@@ -29,7 +29,7 @@ async function getAgent() {
   ];
   var agent = names[Math.floor(Math.random() * names.length)];
 
-  if (agentArr.length > 100) {
+  if (agentArr.length === 20) {
     DOMSelectors.display.innerHTML = "";
     alert(
       "Error! You have randomly selected each of the agents currently in the game. Please click reset in order to select another agent."
@@ -59,10 +59,11 @@ async function getAgent() {
       } catch (err) {
         console.error(err);
       }
+
+      agentArr.push(`${agent}`);
     }
   }
 
-  agentArr.push(`${agent}`);
   console.log(agentArr);
 }
 
