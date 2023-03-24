@@ -7,5 +7,3 @@ import { instructions } from "./instructions";
 DOMSelectors.agentBtn.addEventListener("click", getAgent);
 DOMSelectors.resetBtn.addEventListener("click", reset);
 DOMSelectors.instructionsBtn.addEventListener("click", instructions);
-
-//https://stackoverflow.com/questions/13237421/how-to-generate-random-words-in-javascript

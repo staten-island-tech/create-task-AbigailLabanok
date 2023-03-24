@@ -2,6 +2,7 @@ import { DOMSelectors } from "./DOM";
 import { agentArr } from "./array";
 
 const agentapi = "https://valorant-api.com/v1/agents";
+// All images are taken from the Valorant Agent Api
 
 async function getAgent() {
   DOMSelectors.display.innerHTML = "";
